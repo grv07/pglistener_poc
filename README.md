@@ -1,4 +1,4 @@
-# pglistener_poc
+# PgListener
 
 A PgListener example based on [sqlx PgListener](https://docs.rs/sqlx/0.6.2/sqlx/postgres/struct.PgListener.html) that 
 used PgListener to listen the change in a table and update the Arc<HashMap> in real time.
