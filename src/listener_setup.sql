@@ -19,14 +19,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Add UPDATE table trigger
+-- Add UPDATE row trigger
 DROP TRIGGER users_notify_update ON my_table;
 CREATE TRIGGER users_notify_update AFTER UPDATE ON my_table FOR EACH ROW EXECUTE PROCEDURE table_update_notify();
 
--- Add INSERT table trigger
+-- Add INSERT row trigger
 DROP TRIGGER users_notify_insert ON my_table;
 CREATE TRIGGER users_notify_insert AFTER INSERT ON my_table FOR EACH ROW EXECUTE PROCEDURE table_update_notify();
 
--- Add DELETE table trigger
+-- Add DELETE row trigger
 DROP TRIGGER users_notify_delete ON my_table;
 CREATE TRIGGER users_notify_delete AFTER DELETE ON my_table FOR EACH ROW EXECUTE PROCEDURE table_update_notify();
