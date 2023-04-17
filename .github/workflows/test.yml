@@ -15,7 +15,7 @@ jobs:
     name: ubuntu / ${{ matrix.toolchain }}
     strategy:
       matrix:
-        toolchain: [stable, beta]
+        toolchain: [stable]
     steps:
       - uses: actions/checkout@v3
         with:
