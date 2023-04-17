@@ -12,6 +12,8 @@ async fn main() {
     )
     .await
     .unwrap();
+    let _ = "gush jfre".split(" ");
+
     let channels = vec!["table_update"];
 
     let hm: HashMap<String, String> = HashMap::new();
@@ -33,6 +35,7 @@ async fn main() {
             }
         };
         println!("constants: {:?}", constants);
+        println!(" ");
     };
 
     let _ = start_listening(&pool, channels, call_back).await;
